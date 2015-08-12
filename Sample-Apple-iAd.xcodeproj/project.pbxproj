@@ -14,6 +14,8 @@
 		7727451A1B666BA500EA324C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 772745181B666BA500EA324C /* LaunchScreen.xib */; };
 		772745261B666BA500EA324C /* Sample_Apple_iAdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772745251B666BA500EA324C /* Sample_Apple_iAdTests.swift */; };
 		772745301B666E2900EA324C /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7727452F1B666E2900EA324C /* iAd.framework */; };
+		8E40592F1B7AD79C00B09A73 /* AdMobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E40592E1B7AD79C00B09A73 /* AdMobViewController.swift */; };
+		D4F9404513BD821D6D80C71F /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70DEEDDABE5CBC44A3C32970 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		583F077FE6F3BCA0F724CB7F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		70DEEDDABE5CBC44A3C32970 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7727450A1B666BA500EA324C /* Sample-Apple-iAd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample-Apple-iAd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7727450E1B666BA500EA324C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7727450F1B666BA500EA324C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,9 @@
 		772745241B666BA500EA324C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		772745251B666BA500EA324C /* Sample_Apple_iAdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample_Apple_iAdTests.swift; sourceTree = "<group>"; };
 		7727452F1B666E2900EA324C /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		8E40592E1B7AD79C00B09A73 /* AdMobViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdMobViewController.swift; sourceTree = "<group>"; };
+		8E4059301B7ADA7000B09A73 /* Sample-Apple-iAd-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sample-Apple-iAd-Bridging-Header.h"; sourceTree = "<group>"; };
+		AA9CD575A9155CD539CD0948 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				772745301B666E2900EA324C /* iAd.framework in Frameworks */,
+				D4F9404513BD821D6D80C71F /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +74,7 @@
 				7727450C1B666BA500EA324C /* Sample-Apple-iAd */,
 				772745221B666BA500EA324C /* Sample-Apple-iAdTests */,
 				7727450B1B666BA500EA324C /* Products */,
+				B01E27C3313E54B0B5953CFD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +96,8 @@
 				772745161B666BA500EA324C /* Images.xcassets */,
 				772745181B666BA500EA324C /* LaunchScreen.xib */,
 				7727450D1B666BA500EA324C /* Supporting Files */,
+				8E40592E1B7AD79C00B09A73 /* AdMobViewController.swift */,
+				8E4059301B7ADA7000B09A73 /* Sample-Apple-iAd-Bridging-Header.h */,
 			);
 			path = "Sample-Apple-iAd";
 			sourceTree = "<group>";
@@ -120,8 +131,18 @@
 			isa = PBXGroup;
 			children = (
 				7727452F1B666E2900EA324C /* iAd.framework */,
+				70DEEDDABE5CBC44A3C32970 /* Pods.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B01E27C3313E54B0B5953CFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				583F077FE6F3BCA0F724CB7F /* Pods.debug.xcconfig */,
+				AA9CD575A9155CD539CD0948 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,9 +152,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 772745291B666BA500EA324C /* Build configuration list for PBXNativeTarget "Sample-Apple-iAd" */;
 			buildPhases = (
+				1CFD0DD219D4FFB90802C686 /* Check Pods Manifest.lock */,
 				772745061B666BA500EA324C /* Sources */,
 				772745071B666BA500EA324C /* Frameworks */,
 				772745081B666BA500EA324C /* Resources */,
+				607E0F499D1694D11239BB66 /* Embed Pods Frameworks */,
+				D68C27EC5AED33E5A9A982AB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -168,6 +192,7 @@
 		772745021B666BA500EA324C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = Technophile;
 				TargetAttributes = {
@@ -219,6 +244,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1CFD0DD219D4FFB90802C686 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		607E0F499D1694D11239BB66 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D68C27EC5AED33E5A9A982AB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		772745061B666BA500EA324C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -226,6 +299,7 @@
 			files = (
 				772745121B666BA500EA324C /* ViewController.swift in Sources */,
 				772745101B666BA500EA324C /* AppDelegate.swift in Sources */,
+				8E40592F1B7AD79C00B09A73 /* AdMobViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,21 +424,28 @@
 		};
 		7727452A1B666BA500EA324C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 583F077FE6F3BCA0F724CB7F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sample-Apple-iAd/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sample-Apple-iAd/Sample-Apple-iAd-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		7727452B1B666BA500EA324C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA9CD575A9155CD539CD0948 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Sample-Apple-iAd/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sample-Apple-iAd/Sample-Apple-iAd-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -421,6 +502,7 @@
 				7727452B1B666BA500EA324C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7727452C1B666BA500EA324C /* Build configuration list for PBXNativeTarget "Sample-Apple-iAdTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +511,7 @@
 				7727452E1B666BA500EA324C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
